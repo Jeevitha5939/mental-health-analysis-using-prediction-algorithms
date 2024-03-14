@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Prediction</title>
+    <style>
+        body {
+            background-image: url('brain.jpg');
+            height: 100vh;
+            /* Specify other background properties such as size, position, and repeat */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow:hidden;
+            /* Add styles for the text */
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Machine Learning Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Age">Age:</label>
+        <input type="number" name="Age" required><br>
+
+        <label for="Gender">Gender:</label>
+        <select name="Gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Trans">Trans</option>
+            <!-- Add more gender options as needed -->
+        </select><br>
+
+        <label for="Country">Country:</label>
+        <select name="Country" required>
+            <option value="United States">United States</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="Germany">Germany</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Australia">Australia</option>
+            <option value="France">France</option>
+            <option value="India">India</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Poland">Poland</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Italy">Italy</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Brazil  ">Brazil  </option>Belgium                     6
+            <option value="Israel">Israel</option>
+            <option value="Singapore">Singapore </option>
+            <option value="Bulgaria">Bulgaria </option>
+            <option value="Austria"> Austria</option>
+            <option value="Finland">Finland</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Russia">Russia</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Greece">Greece</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Moldova">Moldova</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Bahamas, The">Bahamas, The</option>
+            <option value="China">China</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Norway">Norway</option>
+            <option value="Romania">Romania</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Japan">Japan</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Spain">Spain</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Philippines">Philippines</option>
+             <!-- Add more country options as needed -->
+        </select><br>
+
+        <label for="state">State:</label>
+        <select name="state" required>
+            <option value="CA">CA</option>
+            <option value="WA">WA</option>
+            <option value="NY">NY</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="OH">OH</option>
+            <option value="IL">IL</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="IN">IN</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MA">MA</option>
+            <option value="FL">FL</option>
+            <option value="NC">NC</option>
+            <option value="VA">VA</option>
+            <option value="WI">WI</option>
+            <option value="GA">GA</option>
+            <option value="MO">MO</option>
+            <option value="UT">UT</option>
+            <option value="CO">CO</option>
+            <option value="MD">MD</option>
+            <option value="AL">AL</option>
+            <option value="AZ">AZ</option>
+            <option value="OK">OK</option>
+            <option value="NJ">NJ</option>
+            <option value="KY">KY</option>
+            <option value="SC">SC</option>
+            <option value="IA">IA</option>
+            <option value="CT">CT</option>
+            <option value="DC">DC</option>
+            <option value="NV">NV</option>
+            <option value="VT">VT</option>
+            <option value="SD">SD</option>
+            <option value="KS">KS</option>
+            <option value="NH">NH</option>
+            <option value="WY">WY</option>
+            <option value="NM">NM</option>
+            <option value="NE">NE</option>
+            <option value="WV">WV</option>
+            <option value="ID">ID</option>
+            <option value="MS">MS</option>
+            <option value="RI">RI</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <!-- Add more state options as needed -->
+        </select><br>
+
+        <label for="self_employed">Self Employed:</label>
+        <select name="self_employed" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+
+        <label for="family_history">Family History of Mental Illness:</label>
+        <select name="family_history" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+
+
+        <label for="work_interfere">Work Interference:</label>
+        <select name="work_interfere" required>
+            <option value="Never">Never</option>
+            <option value="Rarely">Rarely</option>
+            <option value="Sometimes">Sometimes</option>
+            <option value="Often">Often</option>
+        </select><br>
+
+        <label for="no_employees">no_employees</label>
+        <input type="number" name="no_employees" required><br>
+
+           
+        </select><br>
+
+        <label for="remote_work">Remote Work:</label>
+        <select name="remote_work" required>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select><br>
+
+        <label for="tech_company">Tech Company:</label>
+        <select name="tech_company" required>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select><br>
+
+        <label for="benefits">Mental Health Benefits:</label>
+        <select name="benefits" required>
+            
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select><br>
+
+        <label for="care_options">Mental Health Care Options:</label>
+        <select name="care_options" required>
+            <option value="No">No</option>
+            <option value="Not sure">Not sure</option>
+            <option value="Yes">Yes</option>
+        </select><br>
+
+        <label for="wellness_program">Wellness Program:</label>
+        <select name="wellness_program" required>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select><br>
+
+        <label for="seek_help">Seek Help:</label>
+        <select name="seek_help" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label for="anonymity">Anonymity:</label>
+        <select name="anonymity" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label for="leave">Leave:</label>
+        <select name="leave" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label for="mental_health_consequence">Mental Health Consequence:</label>
+        <select name="mental_health_consequence" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label for="phys_health_consequence">Physical Health Consequence:</label>
+        <select name="phys_health_consequence" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label for="coworkers">Coworkers:</label>
+        <select name="coworkers" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label for="supervisor">Supervisor:</label>
+        <select name="supervisor" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label for="mental_health_interview">Mental Health Interview:</label>
+        <select name="mental_health_interview" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label for="phys_health_interview">Physical Health Interview:</label>
+        <select name="phys_health_interview" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label for="mental_vs_physical">Mental vs Physical:</label>
+        <select name="mental_vs_physical" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label for="obs_consequence">Observation Consequence:</label>
+        <select name="obs_consequence" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        
+
+
+        <!-- Add similar dropdowns for other attributes -->
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
