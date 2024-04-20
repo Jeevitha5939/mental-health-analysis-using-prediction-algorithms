@@ -261,7 +261,7 @@ def predict():
 
 
         # Map numerical prediction back to "yes" or "no"
-    prediction_label = "Take care of your Health" if prediction[0] == 1 else "You need to consult your Doctor"
+    prediction_label = "Take care of your Health" if prediction[0] == 1 else "MENTAL HEALTH IS IMPORTANT! You need to consult your Doctor"
 
     return render_template('result.html',prediction_label=prediction_label)
 
